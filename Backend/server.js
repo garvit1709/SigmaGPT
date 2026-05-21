@@ -6,7 +6,7 @@ import chatRoutes from "./routes/chat.js";
 import authRoutes from "./routes/auth.js";
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 10000;
 
 if (!process.env.JWT_SECRET) {
     console.warn("Warning: JWT_SECRET is not set in .env");
