@@ -1,0 +1,273 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.modal {
+  background: #2a2a2a;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal.wide {
+  max-width: 720px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ececec;
+}
+
+.modalClose {
+  background: none;
+  border: none;
+  color: #b4b4b4;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.modalClose:hover {
+  color: #fff;
+}
+
+.modalBody {
+  padding: 1.5rem;
+}
+
+.modalTabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.modalTab {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: #b4b4b4;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.modalTab.active {
+  background: #10a37f;
+  border-color: #10a37f;
+  color: #fff;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 0.8rem;
+  color: #b4b4b4;
+  margin-bottom: 0.35rem;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #1a1a1a;
+  border-radius: 8px;
+  color: #ececec;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #10a37f;
+}
+
+.formError {
+  color: #f87171;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.btnPrimary {
+  width: 100%;
+  padding: 0.75rem;
+  background: #10a37f;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  background: #0d8c6d;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.accountInfo {
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.accountRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.accountRow span:first-child {
+  color: #8e8e8e;
+}
+
+.planBadge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.planBadge.free {
+  background: #3a3a3a;
+  color: #b4b4b4;
+}
+
+.planBadge.pro {
+  background: #1e3a5f;
+  color: #60a5fa;
+}
+
+.planBadge.prime {
+  background: #4a3728;
+  color: #fbbf24;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .planGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.planCard {
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: left;
+  position: relative;
+}
+
+.planCard.current {
+  border-color: #10a37f;
+}
+
+.planCard h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  color: #ececec;
+}
+
+.planPrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #10a37f;
+  margin: 0.5rem 0;
+}
+
+.planPrice span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #8e8e8e;
+}
+
+.planFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  color: #b4b4b4;
+}
+
+.planFeatures li {
+  padding: 0.25rem 0;
+}
+
+.planFeatures li::before {
+  content: "✓ ";
+  color: #10a37f;
+}
+
+.btnPlan {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #ececec;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btnPlan:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btnPlan.primary {
+  background: #10a37f;
+  border-color: #10a37f;
+  color: #fff;
+}
+
+.btnPlan:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.currentLabel {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.7rem;
+  color: #10a37f;
+  font-weight: 600;
+}

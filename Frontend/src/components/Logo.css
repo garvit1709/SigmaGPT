@@ -1,0 +1,19 @@
+.appLogo {
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.appLogo--sm {
+  width: 32px;
+  height: 32px;
+}
+
+.appLogo--md {
+  width: 40px;
+  height: 40px;
+}
+
+.appLogo--lg {
+  width: 80px;
+  height: 80px;
+}

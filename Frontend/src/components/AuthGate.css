@@ -1,0 +1,29 @@
+.authGate {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  min-height: 100vh;
+}
+
+.authGateCard {
+  text-align: center;
+  padding: 3rem;
+  max-width: 400px;
+}
+
+.authLogo {
+  margin-bottom: 1rem;
+}
+
+.authGateCard h1 {
+  margin: 0 0 0.5rem;
+  color: #ececec;
+}
+
+.authGateCard p {
+  color: #8e8e8e;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
